@@ -4,6 +4,7 @@ This project is created using simple maven project witout any Spring CLI or othe
 ## Others ways to create Spring boot App
 1. http://start.spring.io/ Web UI
 2. Spring Boot CLI
+3. Using Spring STS
 
 
 ### Create Spring boot app using Spring boot CLI.
