@@ -1,12 +1,15 @@
-package com.springboot.starter.topics;
+package com.springboot.starter.course;
 
 import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import com.springboot.starter.topics.Topic;
 
 @Entity
-public class Topic implements Serializable{
+public class Course implements Serializable{
 	
 	/**
 	 * 
@@ -20,18 +23,33 @@ public class Topic implements Serializable{
 	private String name;
 	private String description;
 	
+	//many topics associated with on course
+	@ManyToOne
+	private Topic topic;
 	
 	
-	public Topic() {
+	public Course() {
 		
 	}
 	
 	
-	public Topic(String id, String name, String description) {
+	public Course(String id, String name, String description, String topicId) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
+		this.topic=new Topic(topicId,"","");
+	}
+
+	
+
+	public Topic getTopic() {
+		return topic;
+	}
+
+
+	public void setTopic(Topic topic) {
+		this.topic = topic;
 	}
 
 

@@ -14,7 +14,7 @@ public class TopicController {
 	
 	
 	@Autowired
-	TopicService topicService;
+	TopicServiceUsingJpa topicService;
 	
 	@RequestMapping("/topics")  //By Default its RequestMethod is GET
 	public List<Topic> getAllTopics() {
